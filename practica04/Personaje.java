@@ -1,6 +1,6 @@
 public class Personaje{
 	private String nombre;
-	private int edad = 0;
+	private int edad;
 	public Personaje(String nombre){
 		this.nombre = nombre;
 	}
