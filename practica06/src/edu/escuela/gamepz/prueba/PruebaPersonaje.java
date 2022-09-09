@@ -1,5 +1,5 @@
-package com.patito.poo1pract.prueba;
-import com.patito.poo1pract.personajes.Personaje;
+package edu.patito.poo1pract.prueba;
+import edu.patito.poo1pract.personajes.Personaje;
 public class PruebaPersonaje{
 	public static void main(String[] args) {
 		Personaje per01 = new Personaje("Almendra",200);
@@ -23,6 +23,14 @@ public class PruebaPersonaje{
 		per06.setNombre("Francisco Xavier Zepeda Flores");
 		per08.setNombre("Dayan");
 		per10.setNombre("Alex Fabian Eduardo David");
-		
+
+		per07.setEdad((int)(Math.random()*100));
+		per09.setEdad((int)(Math.random()*100));
+		System.out.println("___");
+		System.out.println(per01.getDetalle());
+		System.out.println(per02.getDetalle());
+		System.out.println(per03.getDetalle());
+		System.out.println(per04.getDetalle());
+		System.out.println(per05.getDetalle());
 	}
 }
