@@ -29,7 +29,7 @@ public class Personaje{
 		System.out.println("Hola Alumno de POO "+ nombre);
 	}
 	public String getDetalle(){
-		String detalle = "Nombre: " + nombre + "\t"+ "Edad: " + edad;
+		String detalle = "Nombre: " + nombre + "  " + "\t"+ "Edad: " + edad;
 		return detalle;
 	}
 }
