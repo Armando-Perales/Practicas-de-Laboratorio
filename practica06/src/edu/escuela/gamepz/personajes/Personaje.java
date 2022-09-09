@@ -1,4 +1,4 @@
-package com.patito.poo1pract.personajes;
+package edu.escuela.gamepz.personajes;
 public class Personaje{
 	private String nombre;
 	private int edad;

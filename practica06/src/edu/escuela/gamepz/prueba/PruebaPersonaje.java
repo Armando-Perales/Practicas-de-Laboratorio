@@ -1,5 +1,5 @@
-package edu.patito.poo1pract.prueba;
-import edu.patito.poo1pract.personajes.Personaje;
+package edu.escuela.gamepz.prueba;
+import edu.escuela.gamepz.personajes.*;
 public class PruebaPersonaje{
 	public static void main(String[] args) {
 		Personaje per01 = new Personaje("Almendra",200);
