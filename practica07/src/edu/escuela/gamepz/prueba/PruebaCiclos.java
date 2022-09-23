@@ -17,40 +17,37 @@ public class PruebaCiclos{
 		System.out.println("m = " + m);
 
 		outfor:
-		for (int i = n; i < m; i--) {
+		for (int i = n; i < m; i++) {
 			
 			int ed = (int) (Math.random()*250);
-			per01.setEdad(ed);
-			if (per01.getEdad() == ed) {
-				System.out.println(per01.getDetalle() + " se modificó la edad");
+			if (per01.setEdad(ed)) {
+				System.out.println(per01.getDetalle() + " se modifico la edad");
 			} else {
-				System.out.println(per01.getDetalle() + " sin modificación en edad a " + ed);
+				System.out.println(per01.getDetalle() + " sin modificacion en edad a " + ed);
 			}
 			
 			ed = (int) (Math.random()*250);
-			per02.setEdad(ed);
-			if (per02.getEdad() == ed) {
-				System.out.println(per02.getDetalle() + " se modificó la edad");
+			if (per02.setEdad(ed)) {
+				System.out.println(per02.getDetalle() + " se modifico la edad");
 			} else {
-				System.out.println(per02.getDetalle() + " sin modificación en edad a " + ed);
+				System.out.println(per02.getDetalle() + " sin modificacion en edad a " + ed);
 			}
 			
 			ed = (int) (Math.random()*250);
-			per03.setEdad(ed);
-			if (per01.getEdad() == ed) {
-				System.out.println(per03.getDetalle() + " se modificó la edad");
+			if (per03.setEdad(ed)) {
+				System.out.println(per03.getDetalle() + " se modifico la edad");
 			} else {
-				System.out.println(per03.getDetalle() + " sin modificación en edad a " + ed);
+				System.out.println(per03.getDetalle() + " sin modificacion en edad a " + ed);
 			}
 
 			do {
 				ed = (int) (Math.random()*200);
 				System.out.println(ed);
 				if (ed > 150) {
-					System.out.println("*** El número generado es mayor a 150 ***");
+					System.out.println("*** El numero generado es mayor a 150 ***");
 					continue outfor;
 				}
-			} while (per04.setEdad(ed));
+			} while (!per04.setEdad(ed));
 
 			System.out.println(per04.getDetalle());
 		}
