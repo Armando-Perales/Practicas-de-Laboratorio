@@ -11,26 +11,33 @@ public class PruebaCiclos{
 		int m = 0;
 		while (n >= m){
 			n = ((int) (Math.random()*100));
-			m = ((int) (Math.random()*100))
+			m = ((int) (Math.random()*100));
 		}
 		System.out.println("n = " + n);
 		System.out.println("m = " + m);
 
-		for (int i = n; i > m; i--) {
+		outfor:
+		for (int i = n; i < m; i--) {
+			
 			int ed = (int) (Math.random()*250);
-			if (per01.getEdad() == per01.setEdad(ed)) {
+			per01.setEdad(ed);
+			if (per01.getEdad() == ed) {
 				System.out.println(per01.getDetalle() + " se modificó la edad");
 			} else {
 				System.out.println(per01.getDetalle() + " sin modificación en edad a " + ed);
 			}
+			
 			ed = (int) (Math.random()*250);
-			if (per02.getEdad() == per02.setEdad(ed)) {
+			per02.setEdad(ed);
+			if (per02.getEdad() == ed) {
 				System.out.println(per02.getDetalle() + " se modificó la edad");
 			} else {
 				System.out.println(per02.getDetalle() + " sin modificación en edad a " + ed);
 			}
+			
 			ed = (int) (Math.random()*250);
-			if (per01.getEdad() == per03.setEdad(ed)) {
+			per03.setEdad(ed);
+			if (per01.getEdad() == ed) {
 				System.out.println(per03.getDetalle() + " se modificó la edad");
 			} else {
 				System.out.println(per03.getDetalle() + " sin modificación en edad a " + ed);
@@ -43,7 +50,9 @@ public class PruebaCiclos{
 					System.out.println("*** El número generado es mayor a 150 ***");
 					continue outfor;
 				}
-			}
+			} while (per04.setEdad(ed));
+
+			System.out.println(per04.getDetalle());
 		}
 	}
 }
