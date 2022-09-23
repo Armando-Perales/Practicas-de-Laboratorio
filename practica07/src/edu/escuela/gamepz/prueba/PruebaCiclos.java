@@ -13,5 +13,12 @@ public class PruebaCiclos{
 			n = ((int) (Math.random()*100));
 			m = ((int) (Math.random()*100))
 		}
+		System.out.println("n = " + n);
+		System.out.println("m = " + m);
+
+		for (int i = n; i < m; i++) {
+			per01.setEdad((int) (Math.random()*250));
+
+		}
 	}
 }
