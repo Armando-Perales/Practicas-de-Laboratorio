@@ -6,9 +6,8 @@ public class Serie{
 	private int fibonachi;
 	
 	public int genNumero(int x){
-		n = (int) (Math.random()*x);
-        if (n < 10) {
-            n = 100;
+        if (x < 10) {
+        	n = 100;
             return n;
         } else {
         	return n = (int) (Math.random()*x*10);
