@@ -2,17 +2,20 @@ package mx.parc1.soft.series;
 public class Serie{
 	private int inicio;
 	private int limite;
-    private int n;
 	private int fibonachi;
+	private int n;
 	
 	public int genNumero(int x){
-		n= (int)(Math.random()*x);
-        if (n < 10) {
-        	n = 100;
-            return n;
-        } else {
-        	return n = (int) (Math.random()*x*10);
-        }
+		if (x < 10) {
+			x=100;
+			return x;
+		} else {
+			n = (int) (Math.random()*x*10);
+			while (n < x){
+				n = (int) (Math.random()*x*10);
+			}
+			return n;
+		}
     }
     
 	public int fiboN(int limite){
