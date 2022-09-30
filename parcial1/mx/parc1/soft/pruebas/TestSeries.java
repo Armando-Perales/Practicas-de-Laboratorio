@@ -11,7 +11,7 @@ public class TestSeries {
         int n = s.genNumero(100);
         s.fibo(n);
         */
-        int p = s.fiboN(3, 11);
+        int p = s.fiboN(3);
         System.out.println(p);
     }
 }
