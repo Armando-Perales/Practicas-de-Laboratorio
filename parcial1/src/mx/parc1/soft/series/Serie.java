@@ -9,7 +9,8 @@ public class Serie{
 		inicio=1;
 		fibonachi = 0;
 		for (int i = 0; i < limite ; i++ ) {
-			fibonachi += inicio; 
+			inicio += fibonachi;
+			fibonachi = inicio - fibonachi; 
 		}
 		return inicio;
 	}
