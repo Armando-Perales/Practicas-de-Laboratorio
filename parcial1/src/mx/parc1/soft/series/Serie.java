@@ -7,7 +7,7 @@ public class Serie{
 	public int fiboN(int limite){
 		this.limite = limite;
 		inicio=1;
-		fibonachi = 1;
+		fibonachi = 0;
 		for (int i = 0; i < limite ; i++ ) {
 			fibonachi += inicio; 
 		}
