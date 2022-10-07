@@ -24,7 +24,7 @@ public class Personaje{
 	}
 	public boolean setVida(int vida){
 		boolean resultadoVida = false;
-		if (vida > 0 && vida < 100 ) {
+		if (vida > 0 && vida < 99) {
 			resultadoVida =  true;
 			this.vida = vida;
 		}
@@ -38,23 +38,23 @@ public class Personaje{
 		return detalle;
 	}
 	public void decVida(){
-		if (setVida(vida-1)) {
+		if ((vida-1) > 0 && (vida-1) < 100) {
 			vida -= 1;
 		}
 	}
 	public void decVida(int decrementoVida){
-		if (setVida((vida - decrementoVida))) {
+		if ((vida - decrementoVida) > 0 && (vida - decrementoVida) < 100) {
 			vida -= decrementoVida;
 		}
 	}
 	public void addVida(){
-		if (setVida(vida+1)) {
+		if ((vida + 1) > 0 && (vida + 1) < 100) {
 			vida += 1;	
 		}
 
 	}
 	public void addVida(int incrementoVida){
-		if (setVida((vida + incrementoVida))) {
+		if ((vida + incrementoVida) > 0 && (vida + incrementoVida) < 100) {
 			vida += incrementoVida;
 		}
 	}
