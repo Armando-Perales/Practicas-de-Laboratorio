@@ -32,11 +32,11 @@ public class PruebaHerencia{
 			int numAle = (int) (Math.random()*100);
 			if (tmp instanceof Planta) {
 				System.out.println("Soy planta " + ((Planta)tmp).getEscudo());
-				tmp.addVida(numAle);
+				((Planta)tmp).addVida(numAle);
 			}
 			if (tmp instanceof Zombie) {
 				System.out.println("Soy zombie " + ((Zombie)tmp).getAtaque());
-				tmp.decVida(numAle);
+				((Zombie)tmp).decVida(numAle);
 			}
 			System.out.println(numAle);
 			System.out.println(tmp.getDetalle());
