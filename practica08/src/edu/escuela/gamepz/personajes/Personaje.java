@@ -1,7 +1,7 @@
 package edu.escuela.gamepz.personajes;
 public class Personaje{
-	private String nombre;
-	private int vida;
+	protected String nombre;
+	protected int vida;
 	public Personaje(String nombre, int vida){
 		this.nombre = nombre;
 		this.vida = vida;
@@ -50,5 +50,5 @@ public class Personaje{
 		vida += incrementoVida;
 
 	}
-	
+
 }
