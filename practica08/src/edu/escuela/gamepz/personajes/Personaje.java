@@ -44,8 +44,10 @@ public class Personaje{
 	}
 	public void addVida(){
 		vida += 1;
+		
 	}
 	public void addVida(int incrementoVida){
 		vida += incrementoVida;
+
 	}
 }
