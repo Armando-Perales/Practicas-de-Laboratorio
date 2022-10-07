@@ -44,11 +44,11 @@ public class Planta extends Personaje{
 			super.addVida();
 		}
 	}
-	public void addVida(int decrementoVida){
+	public void addVida(int incrementoVida){
 		if (getEscudo() == 'A') {
-			super.addVida((decrementoVida)*2);
+			super.addVida((incrementoVida)*2);
 		} else {
-			super.addVida(decrementoVida);
+			super.addVida(incrementoVida);
 		}
 	}
 }
