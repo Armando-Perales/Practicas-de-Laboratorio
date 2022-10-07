@@ -24,7 +24,7 @@ public class Personaje{
 	}
 	public boolean setVida(int vida){
 		boolean resultadoVida = false;
-		if (vida > 0 && vida < 100) {
+		if (vida > 0 && vida < 100 ) {
 			resultadoVida =  true;
 			this.vida = vida;
 		}
@@ -43,7 +43,7 @@ public class Personaje{
 		}
 	}
 	public void decVida(int decrementoVida){
-		if (setVida(vida - decrementoVida)) {
+		if (setVida((vida - decrementoVida))) {
 			vida -= decrementoVida;
 		}
 	}
@@ -54,7 +54,7 @@ public class Personaje{
 
 	}
 	public void addVida(int incrementoVida){
-		if (setVida(vida + incrementoVida)) {
+		if (setVida((vida + incrementoVida))) {
 			vida += incrementoVida;
 		}
 	}
