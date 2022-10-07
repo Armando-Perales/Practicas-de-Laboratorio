@@ -25,19 +25,30 @@ public class Planta extends Personaje{
 	public void decVida(){
 		if (getEscudo() == 'A') {
 			super.vida -= 2;
-			return super.vida;
 		} else {
 			super.decVida();
-			return super.vida;
 		}
 	}
 	public void decVida(int decrementoVida){
 		if (getEscudo() == 'A') {
 			super.decVida((decrementoVida)*2);
-			return super.vida;
 		} else {
 			super.decVida(decrementoVida);
-			return super.vida;
+		}
+	}
+
+	public void addVida(){
+		if (getEscudo() == 'A') {
+			super.vida += 2;
+		} else {
+			super.addVida();
+		}
+	}
+	public void addVida(int decrementoVida){
+		if (getEscudo() == 'A') {
+			super.addVida((decrementoVida)*2);
+		} else {
+			super.addVida(decrementoVida);
 		}
 	}
 }
