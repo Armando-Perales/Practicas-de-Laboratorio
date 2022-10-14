@@ -10,5 +10,18 @@ public class Casa{
 	public Casa(String tipo){
 		this(tipo,2,2000000f);
 	}
-	
+	public int hashCode(){
+		return tipo.hashCode()*hab*((int)costo);
+	}
+	public boolean equals(Object o){
+		if ((o != null) && (o instanceof Casa)) {
+			if ((tipo.equals(((Casa)o).tipo)) && (costo == ((Casa)o).costo)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	public String toString(){
+		return tipo + " " + hab + " " + costo;
+	}
 }
