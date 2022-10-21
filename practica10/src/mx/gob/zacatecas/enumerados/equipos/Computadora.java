@@ -3,13 +3,15 @@ import mx.gob.zacatecas.enumerados.utilerias.*;
 public class Computadora{
 	private String marca;
 	private Tipo tipo;
+	private Memoria memo;
 
-	public Computadora(String marca, Tipo tipo){
+	public Computadora(String marca, Memoria memo, Tipo tipo){
 		this.marca = marca;
+		this.memo = memo;
 		this.tipo = tipo;
 	}
 
 	public String toString(){
-		return marca + '\t' + Memoria.getTipo() + '\t'+ Memoria.getVel() + '\t'+ Memoria.getPines() + '\t' + tipo.getType();
+		return marca + '\t' + memo.getTipo() + '\t'+ memo.getVel() + '\t'+ memo.getPines() + '\t' + tipo.getType();
 	}
 }

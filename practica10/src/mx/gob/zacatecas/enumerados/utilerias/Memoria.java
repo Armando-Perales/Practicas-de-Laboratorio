@@ -9,7 +9,7 @@ public enum Memoria{
 	private final float vel;
 	private final int pines;
 
-	public Memoria(String tipo,float vel, int pines){
+	private Memoria(String tipo,float vel, int pines){
 		this.tipo = tipo;
 		this.vel = vel;
 		this.pines = pines;
