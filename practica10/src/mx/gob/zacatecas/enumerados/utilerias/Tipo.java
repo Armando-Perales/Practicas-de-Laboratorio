@@ -1,3 +1,4 @@
+package mx.gob.zacatecas.enumerados.utilerias;
 public enum Tipo{
 	SERVER("Servidor"),
 	WORKSTATION("Estación de trabajo"),

@@ -1,3 +1,4 @@
+package mx.gob.zacatecas.enumerados.utilerias;
 public enum Memoria{
 	DDR("Memoria RAM",166f,30),
 	DDR2("Laptop",240f,35),
