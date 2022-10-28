@@ -30,13 +30,14 @@ public class PruebaHerencia{
 		for (Personaje tmp : personajes ) {
 			cont += 1;
 			System.out.println(tmp);
-			int numAle = (int) (Math.random()*100);
+			int numAle = (int) (Math.random()*10);
 			if (tmp instanceof Planta) {
 				System.out.println("Soy planta " + ((Planta)tmp).getEscudo());
 				((Planta)tmp).addVida(numAle);
 			}
 			if (tmp instanceof Zombie) {
 				System.out.println("Soy zombie " + ((Zombie)tmp).getAtaque());
+				((Zombie)tmp).comer();
 				((Zombie)tmp).decVida(numAle);
 			}
 			System.out.println(numAle);
