@@ -10,6 +10,9 @@ public class Planta extends Personaje{
 	public Planta(String nombre, Escudo escudo){
 		this(nombre,3,escudo);
 	}
+	public Planta(String nombre, int vida){
+		this(nombre,vida,Escudo.NULO);
+	}
 	public Planta(String nombre){
 		this(nombre,3,Escudo.NULO);
 	}
@@ -17,7 +20,7 @@ public class Planta extends Personaje{
 		return escudo;
 	}
 	public String toString(){
-		return super.toString() + "\t" + escudo;
+		return super.toString() + "\t" + escudo.getNivel();
 
 	}
 	public void decVida(){

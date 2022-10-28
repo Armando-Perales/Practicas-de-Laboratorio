@@ -1,6 +1,6 @@
 package edu.escuela.gamepz.personajes.malos;
 import edu.escuela.gamepz.personajes.Personaje;
-package edu.escuela.gamepz.utils.Muerto;
+import edu.escuela.gamepz.utils.Muerto;
 public class Zombie extends Personaje implements Muerto{
 	private boolean ataque;
 	public Zombie(String nombre, int vida, boolean ataque){
@@ -43,5 +43,8 @@ public class Zombie extends Personaje implements Muerto{
 		if (ataque == true) {
 			super.setVida(vida +(decrementoVida*3));
 		}
+	}
+	public void comer(){
+		System.out.println("Come cerebro");
 	}
 }
