@@ -36,5 +36,6 @@ public class PruebaTablero{
 			}
 		}
 		Tablero.mostrar();
+		
 	}
 }
