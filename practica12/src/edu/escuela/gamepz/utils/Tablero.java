@@ -5,7 +5,7 @@ public class Tablero{
 	public static final int MAX_SIZE=10;
 	public static Personaje[] personajes = new Personaje[MAX_SIZE];
 	private Tablero(){}
-	public void mostrar(){
+	public static void mostrar(){
 		int indice = 1;
 		System.out.println("\nInicio * * *Contenido del arreglo en Tablero");
 		for (Personaje tmp : personajes ) {
