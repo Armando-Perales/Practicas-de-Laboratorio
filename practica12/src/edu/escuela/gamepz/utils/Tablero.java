@@ -6,13 +6,14 @@ public class Tablero{
 	public static Personaje[] personajes = new Personaje[MAX_SIZE];
 	private Tablero(){}
 	public static void mostrar(){
-		int indice = 1;
+		int indice = 0;
 		System.out.println("\nInicio * * *Contenido del arreglo en Tablero");
 		for (Personaje tmp : personajes ) {
 			if (tmp == null) {
 				System.out.println(indice+" - - - ");
+			}else{
+				System.out.println(indice+" "+tmp);
 			}
-			System.out.println(indice+" "+tmp);
 			indice += 1;
 		}
 		System.out.println("Fin * * * Contenido del arreglo en Tablero\n");

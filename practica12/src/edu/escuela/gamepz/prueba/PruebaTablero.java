@@ -27,5 +27,14 @@ public class PruebaTablero{
 			}
 		}
 		Tablero.mostrar();
+		for (int i=0;i<Tablero.MAX_SIZE ;i++ ) {
+			int pos = (int) (Math.random()*20-5);
+			try{
+				Tablero.borrar(pos);
+			}catch(PersException pe){
+				System.err.println(pe.getMessage()+" "+pe.getPos());
+			}
+		}
+		Tablero.mostrar();
 	}
 }
