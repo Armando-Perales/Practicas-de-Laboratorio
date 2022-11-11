@@ -44,7 +44,7 @@ public abstract class Personaje implements Comparable<Personaje>{
 		System.out.println("Hola Alumno de POO "+ nombre);
 	}
 	public String toString(){
-		String detalle = nombre + "\t"+ vida;
+		String detalle = nombre + "\t"+ vida + "\t" + size;
 		return detalle;
 	}
 	public abstract void decVida();
@@ -62,7 +62,7 @@ public abstract class Personaje implements Comparable<Personaje>{
 			return this.nombre.compareTo(p.nombre);
 		}
 		if (this.vida != p.vida) {
-			return this.vida - p.vida;
+			return p.vida - this.vida;
 		}
 		if (this.size == p.size) {
 			return 0;

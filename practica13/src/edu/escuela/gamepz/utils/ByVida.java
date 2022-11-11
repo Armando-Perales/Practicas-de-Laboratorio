@@ -13,7 +13,7 @@ public class ByVida implements Comparator<Personaje>{
 			if (p1.getNombre().compareTo(p2.getNombre()) != 0) {
 				valor = p1.getNombre().compareTo(p2.getNombre());
 			}
-			valor = (p1.getSize() < p2.getSize()) ? -1 : 1;
+			valor = (p1.getSize() > p2.getSize()) ? -1 : 1;
 		}
 		return valor;
 	}

@@ -38,7 +38,7 @@ public class PruebaColeccion{
 		for (Personaje p : lista ) {
 			System.out.println(p);
 		}
-		ArrayList arr = new ArrayList();
+		ArrayList<Personaje> arr = new ArrayList<>();
 		arr.addAll(lista);
 		System.out.println(" - - - Orden Tamanio - - - ");
 		Collections.sort(arr,new BySize());
