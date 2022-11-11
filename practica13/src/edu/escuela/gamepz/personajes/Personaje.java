@@ -29,6 +29,9 @@ public abstract class Personaje implements Comparable<Personaje>{
 	public int getVida(){
 		return vida;
 	}
+	public float getSize(){
+		return size;
+	}
 	public boolean setVida(int vida){
 		boolean resultadoVida = false;
 		if (vida >= 0 && vida <= 99) {
