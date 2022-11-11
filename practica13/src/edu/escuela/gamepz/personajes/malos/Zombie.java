@@ -4,8 +4,11 @@ import edu.escuela.gamepz.utils.Muerto;
 public class Zombie extends Personaje implements Muerto{
 	private boolean ataque;
 	public Zombie(String nombre, int vida, boolean ataque){
-		super(nombre,vida);
+		super(nombre,vida,0.0f);
 		this.ataque = ataque;
+	}
+	public Zombie(String nombre, float size){
+		super(nombre,3,size);
 	}
 	public Zombie(String nombre, boolean ataque){
 		this(nombre,3,ataque);
