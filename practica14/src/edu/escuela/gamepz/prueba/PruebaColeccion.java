@@ -11,6 +11,8 @@ import java.util.LinkedList;
 import java.util.Collections;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.File;
+import java.io.*;
 public class PruebaColeccion{
 	public static void main(String[] args) {
 		Personaje[] datos = {
@@ -26,16 +28,30 @@ public class PruebaColeccion{
 		};
 		TreeSet<Personaje> arbol = new TreeSet<>();
 		LinkedList<Personaje> lista = new LinkedList<>();
-		
-		String path = System.getProperty("user.home") + System.getProperty("file.separator");
-		Scanner s = new Scanner(System.in);
-		String fname = s.nextLine();
-		path += fname;
-
 		for (Personaje tmp : datos ) {
 			arbol.add(tmp);
 			lista.add(tmp);
 		}
+		
+		String path = System.getProperty("user.home") + System.getProperty("file.separator");
+		System.out.print("Escribe el nombre del archivo: ");
+		Scanner s = new Scanner(System.in);
+		String fname = s.nextLine();
+		path += fname;
+
+		File f = new File(path);
+		if (f.exists()) {
+			if (f.isFile()) {
+				System.out.println("Ya existe");
+				System.exit(0);
+			}else {
+				mostrarDirectorio(f);
+				System.exit(0);
+			}
+		}else {
+			//guardarObjetos(f,arbol);
+		}
+
 		System.out.println(" - - - Orden Natural - - - ");
 		for (Personaje p : arbol) {
 			System.out.println(p);
@@ -53,4 +69,33 @@ public class PruebaColeccion{
 			System.out.println(p);
 		}
 	}
+
+	private static void mostrarDirectorio(File file){
+		try {
+			FileInputStream input = new FileInputStream(file);
+			BufferedInputStream bufInput = new BufferedInputStream(input);
+			try {
+				FileOutputStream output = new FileOutputStream(file);
+				BufferedOutputStream bufOutput= new BufferedOutputStream(output);
+				try {
+					byte[] line = new byte[128];
+					int bytesRead;
+					bytesRead = input.read(line);
+					while ( bytesRead != -1 ) {
+						output.write(line, 0, bytesRead);
+						bytesRead = input.read(line);
+					}
+				} finally {
+					bufOutput.close();
+				}
+			} finally {
+				bufInput.close();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}/*
+	private static void guardarObjetos(File f, TreeSet<Personaje> a){
+		
+	}*/
 }
