@@ -48,9 +48,8 @@ public class PruebaColeccion{
 				mostrarDirectorio(f);
 				System.exit(0);
 			}
-		}else {
-			//guardarObjetos(f,arbol);
 		}
+		guardarObjetos(f,arbol);
 
 		System.out.println(" - - - Orden Natural - - - ");
 		for (Personaje p : arbol) {
@@ -70,32 +69,23 @@ public class PruebaColeccion{
 		}
 	}
 
-	private static void mostrarDirectorio(File file){
-		try {
-			FileInputStream input = new FileInputStream(file);
-			BufferedInputStream bufInput = new BufferedInputStream(input);
-			try {
-				FileOutputStream output = new FileOutputStream(file);
-				BufferedOutputStream bufOutput= new BufferedOutputStream(output);
-				try {
-					byte[] line = new byte[128];
-					int bytesRead;
-					bytesRead = input.read(line);
-					while ( bytesRead != -1 ) {
-						output.write(line, 0, bytesRead);
-						bytesRead = input.read(line);
-					}
-				} finally {
-					bufOutput.close();
-				}
-			} finally {
-				bufInput.close();
+	private static void mostrarDirectorio(File f){
+		String[] mD = f.list();
+		for (String tmp : mD ) {
+			System.out.println(tmp);
+		}
+	}
+	private static void guardarObjetos(File f,TreeSet colec){
+		try{
+			FileOutputStream fos = new FileOutputStream(f);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			for (Object o : colec) {
+				oos.writeObject(o);
 			}
-		} catch (IOException e) {
+			oos.close();
+			fos.close();
+		}catch (IOException e) {
 			e.printStackTrace();
 		}
-	}/*
-	private static void guardarObjetos(File f, TreeSet<Personaje> a){
-		
-	}*/
+	}
 }
