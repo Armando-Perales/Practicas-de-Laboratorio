@@ -11,8 +11,13 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.FlowLayout;
 public class Ventana extends JFrame{
-	JLabel lblTitulo,lblElem1,lblElem2,hElem1,hElem2;
-	JTextField txtElem1,txtElem2;
+	JLabel lblTitulo;
+	JLabel lblElem1;
+	JLabel lblElem2;
+	JLabel hElem1;
+	JLabel hElem2;
+	JTextField txtElem1;
+	JTextField txtElem2;
 	JButton btnStart;
 
 	public Ventana(){
@@ -34,6 +39,7 @@ public class Ventana extends JFrame{
 		hElem1 = new JLabel(" Aqui va el hilo 1 ");
 		hElem1.setBorder(BorderFactory.createLineBorder(border));
 		hElem1.setPreferredSize(lblDim);
+		hElem2 = new JLabel(" Aqui va el hilo 2 ");
 		hElem2.setBorder(BorderFactory.createLineBorder(border));
 		hElem2.setPreferredSize(lblDim);
 		btnStart.setPreferredSize(lblDim);
