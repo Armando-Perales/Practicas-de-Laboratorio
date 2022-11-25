@@ -1,13 +1,28 @@
+package mx.com.hilos.corredores.ventanas;
+import java.awt.Color;
+import java.awt.Dimension;
+import javax.swing.BorderFactory;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.FlowLayout;
 public class Ventana extends JFrame{
-	JLabel lblTitulo, lblElem1, lblElem2, hElem1, hElem2;
-	JTextField txtElem1, txtElem2;
+	JLabel lblTitulo;
+	JLabel lblElem1;
+	JLabel lblElem2;
+	JLabel hElem1;
+	JLabel hElem2;
+	JTextField txtElem1;
+	JTextField txtElem2;
 	JButton btnStart;
 
 	public Ventana(){
 		initComponents();
 	}
 
-	private void initComponents(){
+	public void initComponents(){
 		int ancho = 550;
 		int alto = 250;
 		Dimension lblDim = new Dimension(ancho-15,alto/10);
@@ -25,5 +40,23 @@ public class Ventana extends JFrame{
 		hElem2.setBorder(BorderFactory.createLineBorder(border));
 		hElem2.setPreferredSize(lblDim);
 		btnStart.setPreferredSize(lblDim);
+		btnStart.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				btnStart.setEneable(false);
+				//iniciar();
+			}
+		});
+		this.setTitle("Practica 15");
+		this.setLayout(new FlowLayout());
+		this.setSize(ancho,alto);
+		this.add(lblTitulo);
+		this.add(lblElem1);
+		this.add(txtElem1);
+		this.add(lblElem2);
+		this.add(txtElem2);
+		this.add(btnStart);
+		this.add(hElem1);
+		this.add(hElem2);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
